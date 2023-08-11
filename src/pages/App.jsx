@@ -3,6 +3,7 @@ import Profile from "../components/profile/profile";
 import Switch from "../components/profile/switch/switch";
 import Links from "../components/links/links";
 import Social from "../components/sociaLinks/sociallinks";
+import Footer from "../components/footer/footer";
 
 import "./App.css";
 
@@ -20,7 +21,7 @@ const App = () => {
   return (
     <div id="container">
       <Profile imgSrc={imgSrc} imgAlt={imgAlt}>
-        @ProfCastello
+        @morais_caio06
       </Profile>
       <Switch></Switch>
       <div id="links">
@@ -37,6 +38,9 @@ const App = () => {
     <Social href={"#"} icon={"logo-tiktok"}/>
     <Social href={"#"} icon={"logo-twitter"}/>
       </div>
+      <Footer link={"#"}>
+    @morais_caio06
+      </Footer>
     </div>
 
   );
