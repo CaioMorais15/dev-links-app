@@ -2,11 +2,13 @@ import { useState } from "react";
 import Profile from "../components/profile/profile";
 import Switch from "../components/profile/switch/switch";
 import Links from "../components/links/links";
+import Social from "../components/sociaLinks/sociallinks";
 
 import "./App.css";
 
 import imgDarkMode from "../img/avatar.jpg";
 import imgLightMode from "../img/avatar-light.jpg";
+
 
 
 const App = () => {
@@ -29,7 +31,14 @@ const App = () => {
           <Links link={"#"}>Projetos</Links>
         </ul>
       </div>
+      <div id="sociallinks">
+    <Social href={"#"} icon={"logo-github"}/>
+    <Social href={"#"} icon={"logo-instagram"}/>
+    <Social href={"#"} icon={"logo-tiktok"}/>
+    <Social href={"#"} icon={"logo-twitter"}/>
+      </div>
     </div>
+
   );
 };
 

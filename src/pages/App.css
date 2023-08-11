@@ -53,3 +53,9 @@ body{
     gap: 16px;
     padding: 24px;
 }
+#sociallinks{
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    gap: 16px;
+}
