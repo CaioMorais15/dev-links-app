@@ -13,17 +13,22 @@ import imgLightMode from "../img/avatar-light.jpg";
 
 
 const App = () => {
-  const [isLightMode, setIsLightMode] = useState(false);
+  const [isLightMode, setIsLightMode] = useState(true);
+  const toggleMode =  () => {
+    setIsLightMode((prevMode) => !prevMode);
+  }
 
   const imgSrc = isLightMode ? imgLightMode : imgDarkMode;
   const imgAlt = isLightMode ? "Imagem no Modo claro" : "Imagem no Modo escuro";
 
+
   return (
+    <div id="App" className={isLightMode ? "light" : ""}>
     <div id="container">
       <Profile imgSrc={imgSrc} imgAlt={imgAlt}>
         @morais_caio06
       </Profile>
-      <Switch></Switch>
+      <Switch mode={toggleMode} infoButton={isLightMode}/>
       <div id="links">
         <ul>
           <Links link={"https://github.com"}>GitHub</Links>
@@ -38,12 +43,10 @@ const App = () => {
     <Social href={"#"} icon={"logo-tiktok"}/>
     <Social href={"#"} icon={"logo-twitter"}/>
       </div>
-      <Footer link={"#"}>
-    @morais_caio06
-      </Footer>
+      <Footer link={"#"}>@morais_caio06</Footer>
     </div>
-
-  );
+    </div>
+ );
 };
 
 export default App;
